@@ -1,0 +1,2 @@
+# SemanticSCo
+SemanticSCo Platform
