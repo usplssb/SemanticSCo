@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://semanticsco/interactions/BasicTypes"
+	xmlns:tns="http://semanticsco/interactions/BasicTypes" elementFormDefault="qualified">
+
+<!-- Basic Information --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+	<!-- Service information (Modified) --> 
+	<complexType name="ServiceInfo">
+        	<sequence>
+        		<element name="ID" type="string" />
+        		<element name="Name" type="string" />
+        		<element name="Description" type="string" />
+        		<element name="Location" type="string" />
+        		<element name="Namespace" type="string" />
+        		<element name="Function" type="string" minOccurs="0" maxOccurs="unbounded"/>
+        		<element name="Input" type="tns:Input" minOccurs="0" maxOccurs="unbounded"/>
+        		<element name="Output" type="tns:Output" minOccurs="0" maxOccurs="unbounded" />
+        		<element name="Interface" type="tns:InterfaceInfo" minOccurs="0" maxOccurs="unbounded"/>
+        		<element name="ReadyForExec" type="boolean" minOccurs="0" />		
+        	</sequence>
+    	</complexType>
+
+	<!-- Interface information (Included) -->
+    	<complexType name="InterfaceInfo">
+        	<sequence>
+            		<element name="ID" type="string" />
+            		<element name="Name" type="string" />
+            		<element name="Location" type="string" />
+            		<element name="Namespace" type="string" />
+            		<element name="Binding" type="tns:BindingInfo" minOccurs="0" maxOccurs="unbounded"/>
+        	</sequence>
+    	</complexType>
+
+	<!-- Binding information (Included) -->
+    	<complexType name="BindingInfo">
+        	<sequence>
+            		<element name="Name" type="string" />
+            		<element name="Location" type="string" />
+            		<element name="Namespace" type="string" />
+            		<element name="Protocol" type="string" />
+            		<element name="Address" type="string" />
+        	</sequence>
+    	</complexType>
+
+	<!-- Input -->
+	<complexType name="Input">
+		<sequence>
+			<element name="SuggestedValue" minOccurs="0" maxOccurs="unbounded" type="tns:SuggestionValue" />
+			<element name="ExecutionValue" type="string" />
+			<element name="Name" type="string"/>
+			<element name="ID" type="string" />
+			<element name="SemanticalType" minOccurs="0" type="string" />
+			<element name="SyntacticalType" minOccurs="0" type="string" />
+		</sequence>
+	</complexType>
+	
+	<!-- Output -->
+	<complexType name="Output">
+		<sequence>
+			<element name="Name" type="string"/>
+			<element name="ID" type="string" />
+			<element name="SemanticalType" minOccurs="0" type="string" />
+			<element name="SyntacticalType" minOccurs="0" type="string" />
+		</sequence>
+	</complexType>
+	
+	<!--  Suggestion Value - defines the ID of the value, returned as suggestion, and its 
+	literal description (for the user to be able to select it) -->
+	<complexType name="SuggestionValue">
+		<sequence>
+			<element name="ValueID" type="string" />
+			<element name="ValueDescription" type="string"/>
+			<element name="Value" type="string" />	
+		</sequence>
+	</complexType>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<!-- GET_LABELS, DISCOVER_INPUT_SEMANTICS, DISCOVER_FUNCTION_SEMANTICS --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+	<!-- Semantic Concept (Included) -->
+	<complexType name="SemanticConcept">
+        	<sequence>
+        		<element name="Name" type="string" />
+        		<element name="Url" type="string" />
+		 	<element name="SemanticSimilarity" type="string" />
+        	</sequence>
+    	</complexType>
+
+	<!-- Tree structure (Included) -->
+	<complexType name="Node">
+        	<sequence>
+        		<element name="Name" type="string" />
+        		<element name="Url" type="string" />
+		 	<element name="ChildrenNode" type="tns:Node" minOccurs="0" maxOccurs="unbounded"/>
+        	</sequence>
+    	</complexType>
+
+	<complexType name="Tree">
+        	<sequence>
+        		<element name="Root" type="tns:Node" />
+        	</sequence>
+    	</complexType>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<!-- DISCOVER_SERVICES --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+	<!-- DISCOVER_SERVICES Requisition --> 
+	<complexType name="InputFunctRequest">
+        	<sequence>
+        		<element name="Function" type="string" minOccurs="0" maxOccurs="unbounded"/>
+		        <element name="Input" type="string" minOccurs="0" maxOccurs="unbounded"/>
+	        </sequence>
+	</complexType>
+
+	<!--  DISCOVER_SERVICES Response -->
+	<complexType name="DiscoverServicesMatching">
+        	<sequence>
+        		<element name="Function" type="string" minOccurs="0" maxOccurs="unbounded" /> <!-- List of requested concepts representing functions --> 
+		        <element name="Input" type="string" minOccurs="0" maxOccurs="unbounded" /> <!-- List of requested semantic concepts representing inputs --> 
+		        <element name="ServiceInfo" type="tns:ServiceInfo" minOccurs="0" maxOccurs="unbounded" /> <!-- List of ServiceInfos representing discovered services --> 
+	        </sequence>
+	</complexType>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<!-- INCLUDE_SERVICES --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+	<complexType name="IncludedServiceStructure">
+		<sequence>
+			<element name="IncludedServiceID" type="string" />
+			<element name="IncludedServiceFunction" type="string" />
+		</sequence>
+	</complexType>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
+
+<!-- RESOLVE_SERVICES --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- Request -->
+	<complexType name="ServInputToResolve">
+		<sequence>
+			<element name="ServiceIdToResolve" type="string" />
+			<element name="InputIdToResolve" type="string" maxOccurs="unbounded" />
+		</sequence>	
+	</complexType>
+
+	<!-- Response -->
+	<complexType name="ResolvingServiceMatching">
+		<sequence>
+			<element name="ServiceIDMatching" type="string" />
+			<element name="InputMatching" type="tns:InputMatching" maxOccurs="unbounded" />
+		</sequence>	
+	</complexType>
+
+	<!-- Response --> 
+	<complexType name="InputMatching">
+		<sequence>
+			<element name="InputID" type="string" />
+			<element name="MatchingValue" type="tns:MatchingService" maxOccurs="unbounded" />
+		</sequence>	
+	</complexType>
+
+	<!-- Response --> 
+	<complexType name="MatchingService">
+		<sequence>
+			<element name="MatchingValueID" type="string" />
+			<element name="ServiceInfo" type="tns:ServiceInfo" />
+		</sequence>
+	</complexType>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->  
+
+<!-- ADD_TO_CONTEXT --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+	<!-- Request -->
+	<complexType name="ContextValue">
+		<sequence>
+			<element name="ValueID" type="string" />
+			<element name="ServiceOutputValue" type="string" />
+			<element name="ServiceID" type="string" />
+		</sequence>	
+	</complexType>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- VALIDATE_INPUTS --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- Request -->
+	<complexType name="InputValidation">
+		<sequence>
+			<element name="ServiceID" type="string" />
+			<element name="InputToValidate" type="tns:InputToValidate" maxOccurs="unbounded" />		
+		</sequence>
+	</complexType>
+
+	<!-- Request -->
+	<complexType name="InputToValidate">
+		<sequence>
+			<element name="InputID" type="string" />
+			<element name="InputedValue" type="string" />
+			<element name="DataSemantics" type="string" />
+			<element name="DataSyntax" type="string" />
+		</sequence>	
+	</complexType>
+
+	<!-- Response -->
+	<complexType name="InvalidInputs">
+		<sequence>
+			<element name="ServiceID" type="string" />
+			<element name="InvalidInputID" type="string" maxOccurs="unbounded" />
+		</sequence>	
+	</complexType>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- COMPOSE_SERVICES --> 
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- Request -->
+	<complexType name="CompositeStructure">
+		<sequence>
+			<element name="ServiceID" type="string" />
+			<element name="compositePair" type="tns:compositePair" maxOccurs="unbounded" />		
+		</sequence>
+	</complexType>
+
+	<!-- Request -->
+	<complexType name="compositePair">
+		<sequence>
+			<element name="InputID" type="string" />
+			<element name="SelectedOutput" type="string" />
+		</sequence>	
+	</complexType>
+
+	<!-- Response (ver VALIDATE_INPUTS) -->
+	<!-- <complexType name="InvalidInputs">
+		<sequence>
+			<element name="ServiceID" type="string" />
+			<element name="InvalidInputID" type="string" maxOccurs="unbounded" />
+		</sequence>	
+	</complexType> -->
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	
+	
+	
+		
+	
+		
+</schema>

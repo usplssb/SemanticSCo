@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://semanticsco/interactions/DiscoverServices"
+	 elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	 xmlns:tns="http://semanticsco/interactions/DiscoverServices" xmlns:basictypes="http://semanticsco/interactions/BasicTypes">
+
+    <import schemaLocation="BasicTypes.xsd" namespace="http://semanticsco/interactions/BasicTypes"> </import>
+
+    <!-- Request Message -->
+    <element name="DiscoverServicesRequest">
+        <complexType>
+            <sequence>
+                <element name="InputFunctRequest" type="basictypes:InputFunctRequest"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <!-- Response message -->
+    <element name="DiscoverServicesResponse">
+        <complexType>
+            <sequence>
+                <element name="DiscoverServicesMatching" type="basictypes:DiscoverServicesMatching" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
+
+

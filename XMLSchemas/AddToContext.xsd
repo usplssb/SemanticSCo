@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://semanticsco/interactions/AddToContext"
+	xmlns:tns="http://semanticsco/interactions/AddToContext" xmlns:basictypes="http://semanticsco/interactions/BasicTypes" elementFormDefault="qualified">
+
+	<import schemaLocation="BasicTypes.xsd"
+		namespace="http://semanticsco/interactions/BasicTypes">
+	</import>
+
+	<!-- Request Message -->
+	<element name="AddToContextRequest">
+		<complexType>
+			<sequence>
+				<choice>
+					<element name="ServiceIdToAdd" type="string" maxOccurs="unbounded" />
+					<element name="ValueToAdd" type="basictypes:ContextValue" maxOccurs="unbounded" />
+				</choice>
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- Response message -->
+	<element name="AddToContextResponse">
+		<complexType>
+			<sequence>
+				<element name="AddToContextResult" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

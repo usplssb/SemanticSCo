@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://semanticsco/interactions/GetLabels"
+	 elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	 xmlns:tns="http://semanticsco/interactions/GetLabels" xmlns:basictypes="http://semanticsco/interactions/BasicTypes">
+
+    <import schemaLocation="BasicTypes.xsd" namespace="http://semanticsco/interactions/BasicTypes"> </import>
+
+    <!-- Request message -->
+    <element name="GetLabelsRequest">
+        <complexType>
+	    <sequence>
+                <element name="OntologyUri" type="string"/>
+                <element name="RootConcept" type="string"/>
+	    </sequence>
+        </complexType>
+    </element>
+
+    <!-- Response message -->
+    <element name="GetLabelsResponse">
+        <complexType>
+            <choice>
+                <element name="SemanticConcept" type="basictypes:SemanticConcept" maxOccurs="unbounded"/>
+            </choice>
+        </complexType>
+    </element>
+</schema>
+
+

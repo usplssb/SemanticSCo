@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://semanticsco/interactions/ComposeServices"
+	xmlns:tns="http://semanticsco/interactions/ComposeServices" xmlns:basictypes="http://semanticsco/interactions/BasicTypes" elementFormDefault="qualified">
+
+	<import schemaLocation="BasicTypes.xsd"
+		namespace="http://semanticsco/interactions/BasicTypes">
+	</import>
+
+	<!-- Request Message -->
+	<element name="ComposeServicesRequest">
+		<complexType>
+			<sequence>
+				<element name="CompositeStructure" type="basictypes:CompositeStructure" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- Response message -->
+	<element name="ComposeServicesResponse">
+		<complexType>
+			<sequence>
+				<element name="InvalidInputs" type="basictypes:InvalidInputs" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

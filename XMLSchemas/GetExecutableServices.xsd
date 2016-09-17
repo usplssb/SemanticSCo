@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://semanticsco/interactions/GetExecutableServices"
+	xmlns:tns="http://semanticsco/interactions/GetExecutableServices" xmlns:basictypes="http://semanticsco/interactions/BasicTypes" elementFormDefault="qualified">
+
+	<import schemaLocation="BasicTypes.xsd"
+		namespace="http://semanticsco/interactions/BasicTypes">
+	</import>
+
+	<!-- Request Message -->
+	<element name="GetExecutableServicesRequest">
+		<complexType>
+			<sequence>
+				<element name="ExecServParam" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<!-- Response message -->
+	<element name="GetExecutableServicesResponse">
+		<complexType>
+			<sequence>
+				<element name="ServiceInfo" type="basictypes:ServiceInfo" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

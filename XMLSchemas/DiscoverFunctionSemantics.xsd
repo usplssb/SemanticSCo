@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://semanticsco/interactions/DiscoverFunctionSemantics"
+	 elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	 xmlns:tns="http://semanticsco/interactions/DiscoverFunctionSemantics" xmlns:basictypes="http://semanticsco/interactions/BasicTypes">
+
+    <import schemaLocation="BasicTypes.xsd" namespace="http://semanticsco/interactions/BasicTypes"> </import>
+
+    <!-- Request message -->
+    <element name="DiscoverFunctionSemanticsRequest">
+        <complexType>
+	    <sequence>
+                <element name="InputConcept" type="basictypes:SemanticConcept" maxOccurs="unbounded"/>
+	    </sequence>
+        </complexType>
+    </element>
+
+    <!-- Response message -->
+    <element name="DiscoverFunctionSemanticsResponse">
+        <complexType>
+            <sequence>
+                <element name="FunctionConcept" type="basictypes:SemanticConcept" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
+
+
