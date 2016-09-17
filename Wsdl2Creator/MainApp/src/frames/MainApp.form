@@ -1,0 +1,1211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.7" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JFileChooser" name="genFileChooser">
+      <Properties>
+        <Property name="acceptAllFileFilterUsed" type="boolean" value="false"/>
+        <Property name="dialogTitle" type="java.lang.String" value="Open"/>
+        <Property name="fileFilter" type="javax.swing.filechooser.FileFilter" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new WarFilter()" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="valFileChooser">
+      <Properties>
+        <Property name="acceptAllFileFilterUsed" type="boolean" value="false"/>
+        <Property name="dialogTitle" type="java.lang.String" value="Open"/>
+        <Property name="fileFilter" type="javax.swing.filechooser.FileFilter" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new WsdlFilter()" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="genResultFileChooser">
+      <Properties>
+        <Property name="acceptAllFileFilterUsed" type="boolean" value="false"/>
+        <Property name="dialogTitle" type="java.lang.String" value="Save as"/>
+        <Property name="fileFilter" type="javax.swing.filechooser.FileFilter" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new WsdlFilter()" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="edFileChooser">
+      <Properties>
+        <Property name="acceptAllFileFilterUsed" type="boolean" value="false"/>
+        <Property name="dialogTitle" type="java.lang.String" value="Open"/>
+        <Property name="fileFilter" type="javax.swing.filechooser.FileFilter" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new WsdlFilter()" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Wsdl2Creator"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="genPanel">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="WSDL Generation">
+                    <Property name="tabTitle" type="java.lang.String" value="WSDL Generation"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="genUploadPanel" max="32767" attributes="0"/>
+                              <Component id="genPerformPanel" alignment="0" max="32767" attributes="0"/>
+                              <Component id="genResultPanel" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="18" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="genUploadPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="genPerformPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="genResultPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="genUploadPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Upload WAR File"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="genPleaseSelectFileLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="genSelectFileButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="genSelectedFileTextField" min="-2" pref="284" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="genPleaseSelectServiceLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" min="-2" pref="292" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genPleaseSelectFileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genPleaseSelectServiceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="genSelectedFileTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="genSelectFileButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jScrollPane1" min="-2" pref="148" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="genPleaseSelectFileLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Please, select a .war file:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="genSelectFileButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Select File"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="genSelectFileButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="genSelectedFileTextField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="text" type="java.lang.String" value="No file selected"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genPleaseSelectServiceLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Please, select service file:"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTree" name="genFileTree">
+                          <Properties>
+                            <Property name="model" type="javax.swing.tree.TreeModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="null" type="code"/>
+                            </Property>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="valueChanged" listener="javax.swing.event.TreeSelectionListener" parameters="javax.swing.event.TreeSelectionEvent" handler="genFileTreeValueChanged"/>
+                          </Events>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="genPerformPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Generate WSDL File"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="genHelpAttributeFormDefaultLabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="genHelpElementFormDefaultLabel" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="genAttributeFormDefaultLabel" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="genElementFormDefaultLabel" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="genAttributeFormDefaultCheckBox" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="genElementFormDefaultCheckBox" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="1" attributes="0">
+                                                          <Component id="genHelpXMLTargetNamespaceLabel" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="genXMLTargetNamespaceLabel" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="genHelpXMLTargetNamespacePrefixLabel" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="genXMLTargetNamespacePrefixLabel" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="genXMLTargetNamespaceTextField" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="genXMLTargetNamespacePrefixTextField" alignment="1" min="-2" pref="308" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <Component id="genHelpTargetNamespacePrefixLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Component id="genTargetNamespacePrefixLabel" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="genHelpServiceAddressLabel" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="genServiceAddressLabel" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="genHelpTargetNamespaceLabel" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="genTargetNamespaceLabel" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="genTargetNamespaceTextField" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="genTargetNamespacePrefixTextField" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="genServiceAddressTextField" alignment="1" min="-2" pref="308" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="invalidServiceAddressLabel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                                      <Component id="genAnalysisFailedLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      <Component id="generateWSDLFileButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="generatingWsdlLabel" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                                          <Component id="genProgressBar" alignment="1" min="-2" pref="109" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="genServiceAddressTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="invalidServiceAddressLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                      <Component id="genHelpServiceAddressLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="genServiceAddressLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genTargetNamespaceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genTargetNamespaceTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genHelpTargetNamespaceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genHelpTargetNamespacePrefixLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genTargetNamespacePrefixLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genTargetNamespacePrefixTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genHelpXMLTargetNamespaceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genXMLTargetNamespaceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genXMLTargetNamespaceTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genHelpXMLTargetNamespacePrefixLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genXMLTargetNamespacePrefixLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genXMLTargetNamespacePrefixTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genHelpAttributeFormDefaultLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genAttributeFormDefaultLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genAttributeFormDefaultCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genHelpElementFormDefaultLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genElementFormDefaultCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genElementFormDefaultLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="generatingWsdlLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="genProgressBar" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="generateWSDLFileButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="genAnalysisFailedLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextField" name="genTargetNamespaceTextField">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="genTargetNamespaceTextFieldKeyReleased"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genTargetNamespaceLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Target Namespace (required):"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="generateWSDLFileButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Generate WSDL"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generateWSDLFileButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genHelpTargetNamespaceLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;[&lt;span style=&quot;color:blue&quot;&gt;&lt;u&gt;help&lt;/u&gt;&lt;/span&gt;]&lt;/html&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="genHelpTargetNamespaceLabelMouseClicked"/>
+                        <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="genHelpTargetNamespaceLabelMouseMoved"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genServiceAddressLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Service Address (required):"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genHelpServiceAddressLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;[&lt;span style=&quot;color:blue&quot;&gt;&lt;u&gt;help&lt;/u&gt;&lt;/span&gt;]&lt;/html&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="genHelpServiceAddressLabelMouseClicked"/>
+                        <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="genHelpServiceAddressLabelMouseMoved"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="genServiceAddressTextField">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="genServiceAddressTextFieldKeyReleased"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JProgressBar" name="genProgressBar">
+                      <Properties>
+                        <Property name="indeterminate" type="boolean" value="true"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="genProgressBar.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="generatingWsdlLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Generating WSDL ..."/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="generatingWsdlLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genAttributeFormDefaultLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Attribute Form Default (optional):"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="genAttributeFormDefaultCheckBox">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="unqualified"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="genAttributeFormDefaultCheckBoxActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genElementFormDefaultLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Element Form Default (optional):"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="genElementFormDefaultCheckBox">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="unqualified"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="genElementFormDefaultCheckBoxActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genHelpAttributeFormDefaultLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;[&lt;span style=&quot;color:blue&quot;&gt;&lt;u&gt;help&lt;/u&gt;&lt;/span&gt;]&lt;/html&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="genHelpAttributeFormDefaultLabelMouseClicked"/>
+                        <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="genHelpAttributeFormDefaultLabelMouseMoved"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genHelpElementFormDefaultLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;[&lt;span style=&quot;color:blue&quot;&gt;&lt;u&gt;help&lt;/u&gt;&lt;/span&gt;]&lt;/html&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="genHelpElementFormDefaultLabelMouseClicked"/>
+                        <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="genHelpElementFormDefaultLabelMouseMoved"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genXMLTargetNamespaceLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="XML Schema Target Namespace (optional):"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genHelpXMLTargetNamespaceLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;[&lt;span style=&quot;color:blue&quot;&gt;&lt;u&gt;help&lt;/u&gt;&lt;/span&gt;]&lt;/html&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="genHelpXMLTargetNamespaceLabelMouseClicked"/>
+                        <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="genHelpXMLTargetNamespaceLabelMouseMoved"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genHelpTargetNamespacePrefixLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;[&lt;span style=&quot;color:blue&quot;&gt;&lt;u&gt;help&lt;/u&gt;&lt;/span&gt;]&lt;/html&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="genHelpTargetNamespacePrefixLabelMouseClicked"/>
+                        <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="genHelpTargetNamespacePrefixLabelMouseMoved"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genTargetNamespacePrefixLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Target Namespace Prefix (optional):"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="genTargetNamespacePrefixTextField">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="genTargetNamespacePrefixTextFieldKeyReleased"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genHelpXMLTargetNamespacePrefixLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;[&lt;span style=&quot;color:blue&quot;&gt;&lt;u&gt;help&lt;/u&gt;&lt;/span&gt;]&lt;/html&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="genHelpXMLTargetNamespacePrefixLabelMouseClicked"/>
+                        <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="genHelpXMLTargetNamespacePrefixLabelMouseMoved"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genXMLTargetNamespacePrefixLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="XML Schema Target Namespace Prefix (optional):"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="genXMLTargetNamespaceTextField">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="genXMLTargetNamespaceTextFieldKeyReleased"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="genXMLTargetNamespacePrefixTextField">
+                      <Properties>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="genXMLTargetNamespacePrefixTextFieldKeyReleased"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="invalidServiceAddressLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;color:red&quot;&gt;* invalid URI&lt;/span&gt;&lt;/html&gt;"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="invalidServiceAddressLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genAnalysisFailedLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;color:red&quot;&gt;Generation Failed!&lt;/span&gt;&lt;/html&gt;"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="genAnalysisFailedLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="genResultPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Result"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="genResultFileLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="genResultFileNameTextField" min="-2" pref="234" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                                      <Component id="genSaveFileButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="genRemoveSoapBindingsButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="genEditingLabel" max="32767" attributes="0"/>
+                                          <Component id="genEditingProgressBar" min="-2" pref="78" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="genEditedResultTextField" min="-2" pref="234" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="genEdAnalysisFailedLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="genEditedResultFileButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="genResultFileNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genResultFileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genRemoveSoapBindingsButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="genEditedResultTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="genSaveFileButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="genEditedResultFileButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="genEdAnalysisFailedLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="genEditingLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="genEditingProgressBar" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextField" name="genResultFileNameTextField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genResultFileLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="WSDL file:"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="genSaveFileButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Save As"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="genSaveFileButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="genRemoveSoapBindingsButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Remove SOAP Bindings &gt;&gt;"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="genRemoveSoapBindingsButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="genEditedResultTextField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="genEditedResultFileButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Save As"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="genEditedResultFileButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JProgressBar" name="genEditingProgressBar">
+                      <Properties>
+                        <Property name="indeterminate" type="boolean" value="true"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="genEditingProgressBar.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genEditingLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Editing WSDL ..."/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="genEditingLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="genEdAnalysisFailedLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;color:red&quot;&gt;Edition Failed!&lt;/span&gt;&lt;/html&gt;"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="genEdAnalysisFailedLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="edPanel">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="WSDL Edition">
+                    <Property name="tabTitle" type="java.lang.String" value="WSDL Edition"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="edUploadPanel" max="32767" attributes="0"/>
+                              <Component id="edResultPanel" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="edUploadPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="edResultPanel" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="edUploadPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Upload WSDL File"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="edSelecFileLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="edSelectFileButton" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                              <Component id="edAnalysisFailedLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="edRemoveSoapBindingsButton" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="editingLabel" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="edProgressBar" min="-2" pref="78" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="edSelectedFileTextField" min="-2" pref="326" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="273" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="edSelecFileLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="edSelectFileButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edSelectedFileTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                      <Component id="edRemoveSoapBindingsButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="edAnalysisFailedLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="editingLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="edProgressBar" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="edSelecFileLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Please, select a WSDL file:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="edSelectFileButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Select File"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edSelectFileButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="edSelectedFileTextField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="text" type="java.lang.String" value="No file selected"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="edRemoveSoapBindingsButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Remove SOAP Bindings"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edRemoveSoapBindingsButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="editingLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Editing WSDL ..."/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="editingLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JProgressBar" name="edProgressBar">
+                      <Properties>
+                        <Property name="indeterminate" type="boolean" value="true"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="edProgressBar.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="edAnalysisFailedLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;span style=&quot;color:red&quot;&gt;Edition Failed!&lt;/span&gt;&lt;/html&gt;"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="edAnalysisFailedLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="edResultPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="WSDL Edition"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jScrollPane3" pref="684" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="edResultLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="317" max="-2" attributes="0"/>
+                                              <Component id="edSaveFileButton" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="edResultLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane3" pref="350" max="32767" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="edSaveFileButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="edResultTextArea">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="editable" type="boolean" value="false"/>
+                            <Property name="rows" type="int" value="5"/>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JButton" name="edSaveFileButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Save as"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edSaveFileButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="edResultLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Edited WSDL File:"/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="valPanel">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+                  <JTabbedPaneConstraints tabName="WSDL Validation">
+                    <Property name="tabTitle" type="java.lang.String" value="WSDL Validation"/>
+                  </JTabbedPaneConstraints>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="valPerformPanel" max="32767" attributes="0"/>
+                              <Component id="valUploadPanel" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="valUploadPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="valPerformPanel" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JPanel" name="valUploadPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="Upload WSDL File"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="valPleaseSelectFileLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="valSelectFileButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="valSelectedFileTextField" min="-2" pref="290" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="317" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="valPleaseSelectFileLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="valSelectFileButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="valSelectedFileTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="48" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="valPleaseSelectFileLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Please, select a WSDL file:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="valSelectFileButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Select File"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="valSelectFileButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="valSelectedFileTextField">
+                      <Properties>
+                        <Property name="editable" type="boolean" value="false"/>
+                        <Property name="text" type="java.lang.String" value="No file selected"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="valPerformPanel">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                        <TitledBorder title="WSDL Validation"/>
+                      </Border>
+                    </Property>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="0" pref="299" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="validatingDocumentLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="valProgressBar" min="-2" pref="108" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="314" max="-2" attributes="0"/>
+                              <Component id="validateButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="validateButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jScrollPane2" pref="210" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="validatingDocumentLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="valProgressBar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="valResultTextArea">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="editable" type="boolean" value="false"/>
+                            <Property name="lineWrap" type="boolean" value="true"/>
+                            <Property name="rows" type="int" value="5"/>
+                            <Property name="wrapStyleWord" type="boolean" value="true"/>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Component class="javax.swing.JButton" name="validateButton">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Validate "/>
+                        <Property name="enabled" type="boolean" value="false"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="validateButtonActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JProgressBar" name="valProgressBar">
+                      <Properties>
+                        <Property name="indeterminate" type="boolean" value="true"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="valProgressBar.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="validatingDocumentLabel">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Validating document..."/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="validatingDocumentLabel.setVisible(false);"/>
+                      </AuxValues>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

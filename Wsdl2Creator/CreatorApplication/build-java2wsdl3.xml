@@ -1,0 +1,70 @@
+<project name="WSDLgenExample" default="wsdlgen" basedir=".">
+
+	<!-- This path should include the jars file of the \lib subdirectory of the Axis2 installation directory.
+	 This is necessary for to find the org.apache.axis2.tool.ant.Java2WSDLTask class. -->
+	
+	<path id="axis2.classpath">
+		<!-- Place your axis2 distribution path here-->
+		<fileset dir="/usr/path/bin/axis2-1.6.2/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- Set location property (location of classes) -->
+	<property name="location" value="xxx" />
+	<property name="exec.classpath" location="${location}" />
+	
+	<!-- Set properties of java2wsdl -->
+	
+	<!-- Set class from which the WSDL file should be constructed -->
+	<property name="className" value="xxx" />
+	
+	<!-- Set service name -->
+	<property name="serviceName" value="xxx" />
+	
+	<!-- Set target namespace (address of WSDL file) -->
+	<property name="targetNamespace" value="xxx" />
+	
+	<!-- Set target namespace prefix -->
+	<property name="targetNamespacePrefix" value="xxx" />
+	
+	<!-- Set attribute form default -->
+	<property name="attrFormDefault" value="xxx" />
+	
+	<!-- Set element form default -->
+	<property name="elementFormDefault" value="xxx" />
+	
+	<!-- Set service address -->
+	<property name="serviceAddress" value="xxx" />
+	
+	<!-- Set XML schema target namespace (address of XML Schema used to define elements in the WSDL file) -->
+	<property name="schemaTargetNamespace" value="xxx" />
+	
+	<!-- Set location of output file -->
+	<property name="outputLocation" value="xxx" />
+	
+	<!-- Set name of output file -->
+	<property name="outputFilename" value="xxx" />
+	
+	<target name="wsdlgen">
+
+		<taskdef name="axis2-java2wsdl" 
+			classname="org.apache.axis2.tool.ant.Java2WSDLTask" 
+			classpathref="axis2.classpath" />
+
+		<axis2-java2wsdl classname="${className}"
+			serviceName="${serviceName}"
+			style="document" 
+			targetNamespace="${targetNamespace}"
+			targetNamespacePrefix="${targetNamespacePrefix}"
+			attrFormDefault ="${attrFormDefault}"
+			elementFormDefault="${elementFormDefault}"
+			schemaTargetNamespace ="${schemaTargetNamespace}"
+			locationUri="${serviceAddress}"
+			outputLocation="${outputLocation}" 
+			outputFileName="${outputFilename}"
+			classpath="${exec.classpath}" 
+			wsdlVersion="2"/>
+	</target>
+
+</project>
