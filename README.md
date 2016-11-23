@@ -2,7 +2,7 @@
 
 ##Gabriela D. A. Guardia
 
-This file provides an overview of the SemanticSCo platform and some instructions to deploy it to your own server
+This file provides an overview of the SemanticSCo platform, instructions to deploy it to your own server and some usage information.
 
 ##Code Organization
 
@@ -60,3 +60,38 @@ created the activiti DB in MySQL using the following code:
 	Create (MySQL) Activiti DB tables by running the following files (BpmnPublisher folder):	activiti.mysql.create.identity.sql
 																								activiti.mysql55.create.engine.sql
 																								activiti.mysql55.create.history.sql
+
+## Usage
+
+Once you deployed the SemanticSCo platform, you should run the BpmnPublisher component in order to publish your own services into the platform service registry. Once your services are available in the service registry, you can then start running the composition features of SemanticSCo. 
+
+The SemanticSCo component encapsulates three subcomponents that are responsible for the management of the composition process. One of these components, namely Coordinator, is available as a SOAP web service which provides indirect access to the other two components. The Coordinator service provides a set of primitive commands that can be accessed through SOAP request/response messages by the CompositeServiceEnactment component (user interface). The primitive commands provided by the Coordinator are defined as follows:
+
+	/***************************************************************************************************************
+	1. DISCOVER INPUT SEMANTICS: requests the set of available ontological concepts that can be used to specify the 
+	semantics of a user-provided dataset;
+	
+	2. DISCOVER FUNCTION SEMANTICS: requests the set of ontological concepts representing analysis activities that 
+	can be performed on a given dataset;
+	
+	3. DISCOVER SERVICES: requests the set of services that provide a given functionality and which are capable of 
+	consuming a given dataset;
+	
+	4. INCLUDE SERVICES: includes a given set of services in the composition chain;
+	
+	5. RESOLVE SERVICES: requests the set of services that are capable of producing data required as input for a 
+	given set of services;
+	
+	6. VALIDATE INPUTS: validates a given set of service inputs, i.e., the association of user-provided datasets to 
+	service inputs;
+	
+	7. COMPOSE SERVICES: requests the forward or backward composition of two services previously included in the 
+	composition chain using the INCLUDE SERVICES command;
+	
+	8. GET EXECUTABLE SERVICES: requests the set of services that are ready for execution, i.e., services whose 
+	required inputs are available; 
+	
+	9. ADD TO CONTEXT: stores a given dataset produced by the execution of a service.	
+	***************************************************************************************************************/
+	
+	More information about the usage of all primitive commands can be found in package XML Schemas.
